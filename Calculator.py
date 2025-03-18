@@ -8,8 +8,11 @@ class Calculator():
       sum += i
     return sum
 
-  def getListOfMoney(self, inputedMoney):
+  def exchangeMoney(self, inputedMoney: list, bank: Bank):
     changedMoney = []
-    while __count(changedMoney) != amountOfMonety:
-      changedMoney.append(10)
+    inputedSum = self.__count(inputedMoney)
+    for i in bank.getNominals():
+      while  bank.getCountOfMoney(i) <= inputedSum:
+        changedMoney =+ i 
+        inputedSum =- i
     return changedMoney
