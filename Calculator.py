@@ -8,7 +8,7 @@ class Calculator():
       sum += i
     return sum
 
-  def getListOfMoney(self, amountOfMonety):
+  def getListOfMoney(self, inputedMoney):
     changedMoney = []
     while __count(changedMoney) != amountOfMonety:
       changedMoney.append(10)
