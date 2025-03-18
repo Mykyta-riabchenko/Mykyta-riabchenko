@@ -1,12 +1,14 @@
+import Bank
+
 class Calculator():
 
-  def __count(list):
+  def __count(self, list):
     sum = 0
     for i in list:
       sum += i
     return sum
 
-  def getListOfMoney(amountOfMonety):
+  def getListOfMoney(self, amountOfMonety):
     changedMoney = []
     while __count(changedMoney) != amountOfMonety:
       changedMoney.append(10)
