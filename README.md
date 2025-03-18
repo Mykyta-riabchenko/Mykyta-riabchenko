@@ -4,8 +4,9 @@ class's:
 ATM, Bank, Calculator, Screen, Input, Controller, Output, InputSystem, Money
 Money - _nominal
 Bank - __bank = {}, addMoney(money), withdrawMoney(nominal), getCountOfMoney(nominal)
-Calculator - getListOfMoney(amountOfMonety) # метод принимает количество денег для выдачи и подбирает оптимальные валюты
-# Если денег в банке не достаточно, ваозвращает пустой лист
+Calculator - getListOfMoney(inputedMoney : list) 
+# матод принимает в себя лист из введённых купюр и выдаёт размен в зависимости от заданной функции
+# почему лист? потому что в ответе могут использоваться монеты пользователя
 Input - __buffer = [], pushInput(value)
 IO:
 Input money > 1 
