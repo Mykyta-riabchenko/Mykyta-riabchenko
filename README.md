@@ -5,8 +5,8 @@ ATM, Bank, Calculator, Screen, Input, Controller, Output, InputSystem, Money
 Money - _nominal
 Bank - __bank = {}, addMoney(money), withdrawMoney(nominal), getCountOfMoney(nominal)
 Calculator - getListOfMoney(inputedMoney : list) 
-# матод принимает в себя лист из введённых купюр и выдаёт размен в зависимости от заданной функции
-# почему лист? потому что в ответе могут использоваться монеты пользователя
+# method accepts a list of entered money and gives out exchange depending on the specified function
+# Why a list? Because the answer can use the user's coins
 Input - __buffer = [], pushInput(value)
 IO:
 Input money > 1 
