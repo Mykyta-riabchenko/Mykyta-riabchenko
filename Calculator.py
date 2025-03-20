@@ -13,9 +13,9 @@ class Calculator():
     #if given sum is larger then amount of money in the bank: return -1
     if inputedSum > self._bankSize(bank):
       return -1             
-    startPoint = 0
 
     #if given money is a nominal the prog has to braek it into smaller pieces
+    startPoint = 0
     if inputedSum in nominalList:     
       startPoint = nominalList.index(inputedSum) + 1
 
