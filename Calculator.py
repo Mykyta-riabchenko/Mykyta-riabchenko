@@ -6,7 +6,7 @@ class Calculator():
      return bankSize
   
   def exchangeMoney(self, inputedMoney: list, bank: Bank):
-    nominalList = [100, 50, 20, 10, 5, 2, 1]
+    nominalList = [10000, 5000, 2000, 1000, 500, 200, 100, 50, 20, 10, 5, 2, 1]
     changedMoney = []
     inputedSum = sum(inputedMoney)
 
@@ -14,7 +14,7 @@ class Calculator():
     if inputedSum > self._bankSize(bank):
       return -1             
     startPoint = 0
-    
+
     #if given money is a nominal the prog has to braek it into smaller pieces
     if inputedSum in nominalList:     
       startPoint = nominalList.index(inputedSum) + 1
@@ -30,7 +30,8 @@ class Calculator():
     #there is not enought nominal in the bank
     if sum(changedMoney) != sum(inputedMoney):
       return -2
-    
+
+
     return changedMoney
  
 # -1 given sum bigger then bank -> Int
