@@ -1,12 +1,10 @@
-from Money import Money
 class Bank():
   def __init__(self):
     self.__bank = {int : list}
-  def addMoney(self, money : Money) -> None:
-    nominal = money.getNominal()
-    if nominal not in self.__bank: 
-      self.__bank[nominal] = []
-    self.__bank[nominal].append(money)
+  def addMoney(self, money : int) -> None:
+    if money not in self.__bank: 
+      self.__bank[money] = []
+    self.__bank[money].append(money)
   def withdrawMoney(self, nominal : int) -> list:
       self.__bank[nominal].pop()
   def getNominals(self) -> list:
