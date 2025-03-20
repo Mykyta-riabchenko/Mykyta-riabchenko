@@ -14,7 +14,7 @@ class Calculator():
     if inputedSum > self._bankSize(bank):
       return -1             
     startPoint = 0
-
+    
     #if given money is a nominal the prog has to braek it into smaller pieces
     if inputedSum in nominalList:     
       startPoint = nominalList.index(inputedSum) + 1
@@ -28,8 +28,9 @@ class Calculator():
         bank.withdrawMoney(i)
 
     #there is not enought nominal in the bank
-    if sum(changedMoney) != inputedSum:
+    if sum(changedMoney) != sum(inputedMoney):
       return -2
+    
     return changedMoney
  
 # -1 given sum bigger then bank -> Int
