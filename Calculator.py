@@ -21,19 +21,17 @@ class Calculator():
 
     #goes through nominals, exchanges money in it untill the nominal is larger then 
     #the whole sum, then switch to smaller nominal
-    for i in nominalList[startPoint:]:
+    for i in nominalList[startPoint:]: 
       while  i <= inputedSum and bank.getCountOfMoney(i) != 0:
         changedMoney.append(i) 
         inputedSum -= i
         bank.withdrawMoney(i)
+
+    #there is not enought nominal in the bank
+    if sum(changedMoney) != inputedSum:
+      return -2
     return changedMoney
  
-
-     #TODO:if the amount of needed coins is not enought the prog's ignoring it
-          #example bank[1, 5, 5, 10] givenList[1, 1, 5, 10]
-
-
-
-    if inputedSum is nominalList:
-      startPoint = nominalList.index(inputedSum) + 1
-      
+# -1 given sum bigger then bank -> Int
+# -2 not enough nominal to exchange -> Int
+# changedMoney -> List[Int]
